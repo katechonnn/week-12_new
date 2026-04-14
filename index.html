@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>puff</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #080808;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1e1e1e;
+  }
+  .cell:last-child { border-right: none; }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #444;
+    padding: 8px 12px;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell">
+      <div class="label">1</div>
+      <iframe src="https://katechonnn.github.io/puff_cap1/" title="1" allowfullscreen></iframe>
+    </div>
+    <div class="cell">
+      <div class="label">2</div>
+      <iframe src="https://katechonnn.github.io/puff_nat1/" title="2" allowfullscreen></iframe>
+    </div>
+    <div class="cell">
+      <div class="label">3</div>
+      <iframe src="https://katechonnn.github.io/puff_question1/" title="3" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>
