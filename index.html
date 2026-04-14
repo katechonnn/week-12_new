@@ -3,84 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>puff</title>
+<title>puff 3 tests — Kate Chon</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #080808;
-    color: #fff;
+    background: #000;
     font-family: 'Courier New', monospace;
+    font-size: 13px;
     height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    color: #fff;
+    margin-bottom: 28px;
+    letter-spacing: 0.04em;
   }
 
   nav {
     display: flex;
-    gap: 24px;
-    padding: 12px 16px;
-    border-bottom: 1px solid #1a1a1a;
-    flex-shrink: 0;
+    flex-direction: column;
+    gap: 6px;
   }
 
-  nav button {
-    background: none;
-    border: none;
-    color: #333;
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.15s;
+  nav a {
+    color: #fff;
+    text-decoration: underline;
+    letter-spacing: 0.04em;
   }
 
-  nav button:hover { color: #888; }
-  nav button.active { color: #fff; }
-
-  .panel {
-    display: none;
-    flex: 1;
-  }
-  .panel.active { display: flex; }
-
-  iframe {
-    flex: 1;
-    width: 100%;
-    border: none;
+  nav a:hover {
+    color: #aaa;
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <button class="active" onclick="show(1)">1</button>
-  <button onclick="show(2)">2</button>
-  <button onclick="show(3)">3</button>
+  <a href="https://katechonnn.github.io/puff_cap1/" target="_blank">1</a>
+  <a href="https://katechonnn.github.io/puff_nat1/" target="_blank">2</a>
+  <a href="https://katechonnn.github.io/puff_question1/" target="_blank">3</a>
 </nav>
-
-<div class="panel active" id="p1">
-  <iframe src="https://katechonnn.github.io/puff_cap1/" title="1"></iframe>
-</div>
-<div class="panel" id="p2">
-  <iframe src="https://katechonnn.github.io/puff_nat1/" title="2"></iframe>
-</div>
-<div class="panel" id="p3">
-  <iframe src="https://katechonnn.github.io/puff_question1/" title="3"></iframe>
-</div>
-
-<script>
-  function show(n) {
-    document.querySelectorAll('.panel').forEach((p, i) => {
-      p.classList.toggle('active', i + 1 === n);
-    });
-    document.querySelectorAll('nav button').forEach((b, i) => {
-      b.classList.toggle('active', i + 1 === n);
-    });
-  }
-</script>
 
 </body>
 </html>
